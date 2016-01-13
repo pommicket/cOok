@@ -1,9 +1,8 @@
 # cOok
 An Ook! compiler
 
-As a reminder, ook is just [Brainf\*\*\*](https://esolangs.org/wiki/Brainfuck), but with these rules:
-
-Ook        Brainf\*\*\*  
+As a reminder, ook is just [Brainf\*\*\*](https://esolangs.org/wiki/Brainfuck), but with these rules:  
+Ook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brainf\*\*\*  
 Ook. Ook?    >  
 Ook? Ook.    <  
 Ook. Ook.    +  

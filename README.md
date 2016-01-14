@@ -12,7 +12,7 @@ Ook. Ook!    ,
 Ook! Ook?    [  
 Ook? Ook!    ]  
 
-*Make sure that there is exactly one space/newline between each ook, and that you add no extra code*
+**You can write a comment anywhere, as long as it doesn't have periods, commas, or exclamation marks.**
 
 # Windows
 

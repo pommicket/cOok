@@ -28,13 +28,15 @@ char ook2bfchar(char a, char b)
     return '.';
 }
 
-int bfsize(int filesize)
+int bfsize(char* text, int filesize)
 {
     int i;
     int sz = 0;
-    for (i = 3; i < filesize; i+=10)
-	sz++;
+    for (i = 0; i < filesize; i++)
+	if (isValid(text[i]))
+	    sz++;
 
+    sz -= sz % 2;
     return sz;
 }
 
@@ -46,7 +48,6 @@ int getSize(FILE *fp)
     return sz;
 }
 
-
 char* ook2bf(char* in_filename)
 {
     
@@ -56,6 +57,7 @@ char* ook2bf(char* in_filename)
     
     in_file = fopen(in_filename, "r");
 
+
     filesize = getSize(in_file);
     
     char ook[filesize];    
@@ -64,14 +66,24 @@ char* ook2bf(char* in_filename)
     
 
     fclose(in_file);
-    char* bf = malloc(bfsize(filesize));
+    char* bf = malloc(bfsize(ook, filesize));
+    int index = 0;
     char c;
-    for (i = 3; (i+5) < filesize; i+=10)
+    char last_character = '0';
+    for (i = 0; i < filesize; i++)
     {
-	if (!isValid(ook[i]) || !isValid(ook[i+5]))
-	    continue;
-	c = ook2bfchar(ook[i], ook[i+5]);
-	bf[(i-3)/10] = c;
+	if (isValid(ook[i]))
+	{
+	    if (last_character == '0')
+		last_character = ook[i];
+	    else
+	    {
+		c = ook2bfchar(last_character, ook[i]);
+		bf[index] = c;
+		index++;
+		last_character = '0';
+	    }
+	}
     }
 
     return bf;

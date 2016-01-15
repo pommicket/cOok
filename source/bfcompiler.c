@@ -98,7 +98,7 @@ void compilebf(char* bf)
     int i;
     int ptr;
     List* l;
-    
+    char c;
     size = strlen(bf);
     
     ptr = START_SIZE / 2;
@@ -127,6 +127,9 @@ void compilebf(char* bf)
 	case '.':
 	    putchar(l->array[ptr]);
 	    break;
+	case ',':
+	    scanf("%c", &c);
+	    l->array[ptr] = c;
 	case '[':
 	    if (!l->array[ptr])
 		i = right_matching(bf, i);

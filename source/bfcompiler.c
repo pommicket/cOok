@@ -128,7 +128,7 @@ void compilebf(char* bf)
 	    putchar(l->array[ptr]);
 	    break;
 	case ',':
-	    scanf("%c", &c);
+	    scanf(" %c", &c);
 	    l->array[ptr] = c;
 	case '[':
 	    if (!l->array[ptr])

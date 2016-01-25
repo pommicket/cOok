@@ -30,6 +30,16 @@ To compile ook, `cd` to the directory where cOok is installed, then run:
 cd build/GNULinux
 ./cook <file>
 ```
+You can also add cook to /usr/bin so that it's in your path.
+```
+sudo cp build/GNULinux
+```
+Then you can just run:
+```
+cook <file>
+```
+Anywhere
+
 
 If you want to compile the source, just run:
 ```

@@ -24,7 +24,6 @@ cook <file>
 ```
 
 # GNU/Linux
-The file extension of the file must be exactly 3 letters. A recommended file extension is *.ook.
 To compile ook, `cd` to the directory where cOok is installed, then run:
 ```
 cd build/GNULinux
